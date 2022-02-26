@@ -27,3 +27,7 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/outputcode.zip'
     replaceExistingArchive: true
+    script: sudo apt install apache2
+    script: sudo ufw allow 'Apache'
+    script:cp /home/vsts/work/1/s/target/sparkjava-hello-world-1.0.war /var/www/html
+    script:sudo systemctl status apache2
