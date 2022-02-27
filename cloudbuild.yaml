@@ -2,7 +2,7 @@ steps:
  - name: maven:3-jdk-8
    entrypoint: mvn
    args: ['package','-Dmaven.test.skip=true']
- - name: 'gcr.io/devopstx786/RBE Ubuntu18.04'
+ - name: 'gcr.io/devopstx786/rbe-ubuntu18-04'
    args: [ zip -rv preetbuild.zip /workspace/target/sparkjava-hello-world-1.0.war']
 artifacts:
   objects:
