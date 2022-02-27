@@ -2,7 +2,7 @@ steps:
  - name: maven:3-jdk-8
    entrypoint: mvn
    args: ['package','-Dmaven.test.skip=true']
-   args: ['cp /workspace/target/sparkjava-hello-world-1.0.war /workspace/']
+   args: ['pwd']
 artifacts:
   objects:
     location: 'gs://preetcb/'
