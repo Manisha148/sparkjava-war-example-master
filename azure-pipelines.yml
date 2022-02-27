@@ -20,16 +20,3 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '/home/vsts/work/1/s/target/sparkjava-hello-world-1.0.war'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '/home/vsts/mvnwar.zip'
-    replaceExistingArchive: true
-    verbose: true
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'current'
-    itemPattern: '**/*.war **/*.zip'
-    targetPath: '$(Pipeline.Workspace)'
