@@ -2,9 +2,8 @@ steps:
  - name: maven:3-jdk-8
    entrypoint: mvn
    args: ['package','-Dmaven.test.skip=true']
- - name: 'bash'
    args: ['cp /workspace/target/sparkjava-hello-world-1.0.war /workspace/']
 artifacts:
   objects:
     location: 'gs://preetcb/'
-    paths: ['*.war', 'cloudbuild.yaml']
+    paths: ['cloudbuild.yaml']
